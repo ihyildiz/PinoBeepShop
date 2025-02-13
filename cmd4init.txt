@@ -8,3 +8,7 @@ npm i --save-dev dotenv
 npm i body-parser
 =========================
 
+PART 2
+-------------------------
+npm i multer
+

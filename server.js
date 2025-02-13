@@ -9,7 +9,8 @@ const bodyParser = require('body-parser')
 
 //const indexRouter = require ('./routes/index') --> bessere Namensgebung
 const routerIndex = require ('./routes/index')
-const routerAuthors = require ('./routes/authors')
+const routerAuthor = require ('./routes/authors')
+const routerBook = require ('./routes/books')
 
 app.set('view engine', 'ejs')
 app.set ('views', __dirname + '/views')
@@ -28,6 +29,7 @@ db.on('error', error => console.error(error))
 db.once('open', () => console.log('connected to mongoose'))
 
 app.use('/', routerIndex)
-app.use('/authors', routerAuthors)
+app.use('/authors', routerAuthor)
+app.use('/books', routerBook)
 
 app.listen(process.env.PORT || 3000)
