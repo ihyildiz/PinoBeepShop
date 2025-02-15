@@ -21,6 +21,8 @@
         <div>..<%= book.coverImagePath %></div>
         <div><%= book.coverImageName %></div-->
         <div><%= book.title %></div>
-        <img height="150" width="100" src="<%= book.coverImagePath%>">   
+        <a href="/books/<%= book.id %>">
+            <img height="150" width="100" src="<%= book.coverImagePath%>">   
+        </a>
     <% }) %>
 </div>
