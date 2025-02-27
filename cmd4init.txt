@@ -4,6 +4,11 @@ npm init -y
 npm install express ejs express-ejs-layouts
 npm i --save-dev nodemon
 npm i mongoose  
+
+        MongoDB START/STOP: 
+            brew services start mongodb/brew/mongodb-community
+            brew services stop mongodb/brew/mongodb-community
+            
 npm i --save-dev dotenv 
 npm i body-parser
 =========================

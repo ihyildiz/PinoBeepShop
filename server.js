@@ -15,7 +15,15 @@ const routerBook = require ('./routes/books')
 
 app.set('view engine', 'ejs')
 app.set ('views', __dirname + '/views')
-app.set ('layout', 'layouts/layout')
+// Standardlayout setzen
+app.set ('layout', 'layouts/default')
+
+// Middleware für spezielle Layouts
+app.use('/admin', (req, res, next) => {
+    res.locals.layout = 'layouts/admin';
+    next();
+  });
+
 app.use (expressLayouts)
 app.use (methodOverride('_method'))
 app.use (express.static('public'))
