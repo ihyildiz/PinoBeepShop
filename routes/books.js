@@ -3,10 +3,8 @@ const router = express.Router()
 
 const Book = require('../models/book')
 const Author = require ('../models/author')
-const e = require('express')
 
 const imageMimeTypes = ['image/jpeg', 'image/png', 'image/gif']
-
 
 // All Books Route
 router.get ('/', async (req, res) => {

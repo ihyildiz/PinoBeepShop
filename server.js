@@ -8,10 +8,12 @@ const expressLayouts = require ('express-ejs-layouts')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 
+
 //const indexRouter = require ('./routes/index') --> bessere Namensgebung
 const routerIndex = require ('./routes/index')
 const routerAuthor = require ('./routes/authors')
 const routerBook = require ('./routes/books')
+const routerOrder = require ('./routes/orders')
 
 app.set('view engine', 'ejs')
 app.set ('views', __dirname + '/views')
@@ -41,5 +43,9 @@ db.once('open', () => console.log('connected to mongoose'))
 app.use('/', routerIndex)
 app.use('/authors', routerAuthor)
 app.use('/books', routerBook)
+app.use('/orders', routerOrder)
+
+
+
 
 app.listen(process.env.PORT || 3000)
