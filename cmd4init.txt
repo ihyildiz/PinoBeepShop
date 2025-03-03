@@ -28,3 +28,5 @@ npm i method-override
 Branch v3-real-shop
 -----------------------
 npm i axios
+npm i nodemailer
+npm i nodemailer-express-handlebars

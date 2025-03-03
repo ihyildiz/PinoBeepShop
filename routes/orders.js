@@ -2,6 +2,7 @@ const express = require ('express')
 const router = express.Router()
 // PAYPAL
 const paypal = require('../services/paypal')
+const mailer = require('../services/nodemailer')
 
 router.post('/pay', async(req, res) =>{
     try {
@@ -36,6 +37,9 @@ router.get('/complete-order', async(req, res) =>{
         console.log('S-Adresse Line1: ', shippingAddress.address_line_1)
 
         console.log('Capture: ', capture)
+
+        // Mailer
+        mailer.nodeMailerSend('ihyildiz@icloud.com')
         res.send('Complete Order')
     } catch (error) {
        //console.log(error)

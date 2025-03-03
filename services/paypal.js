@@ -169,6 +169,7 @@ exports.capturePayment = async (orderId) => {
             'PayPal-Request-Id': orderId, // Verhindert doppelte Verarbeitung
         }
     })
+    
    
     return response.data
 }
