@@ -30,3 +30,8 @@ Branch v3-real-shop
 npm i axios
 npm i nodemailer
 npm i nodemailer-express-handlebars
+
+Send Image in Email
+-------------------
+Console:    base64 -i about-img1.jpg -o output.txt
+html:        <img src="data:image/jpeg;base64, DEIN_BASE64_CODE" alt="any image">
