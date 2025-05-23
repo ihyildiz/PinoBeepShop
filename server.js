@@ -36,11 +36,11 @@ app.use (bodyParser.urlencoded({ limit: '10mb', extended: false }))
 
 // START MONGODB THROUGH TERMINAL
 // brew services start mongodb-community
-const mongoose = require('mongoose')
-mongoose.connect(process.env.DATABASE_URL)
-const db = mongoose.connection
-db.on('error', error => console.error(error))
-db.once('open', () => console.log('connected to mongoose'))
+// const mongoose = require('mongoose')
+// mongoose.connect(process.env.DATABASE_URL)
+// const db = mongoose.connection
+// db.on('error', error => console.error(error))
+// db.once('open', () => console.log('connected to mongoose'))
 
 app.use('/', routerIndex)
 app.use('/authors', routerAuthor)
