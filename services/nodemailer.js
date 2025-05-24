@@ -19,7 +19,7 @@ exports.nodeMailerSend = async (emailReceiver) => {
     //     }
     // });
 
-    const transporter = nodemailer.createTransport({
+    const transporter = nodeMailer.createTransport({
         service: 'gmail',
         auth: {
           user: 'utivision@gmail.com',
@@ -42,7 +42,7 @@ exports.nodeMailerSend = async (emailReceiver) => {
     transporter.use('compile', Handlebars(hbsOptions));
 
     const mailConfig = {
-        from: 'PinoBeep <utivision@gmail.com>>',
+        from: 'PinoBeep <utivision@gmail.com>',
         to: emailReceiver,
         subject: 'TEST Email',
         template: 'welcomeMsg',
@@ -52,10 +52,18 @@ exports.nodeMailerSend = async (emailReceiver) => {
         },
     };
 
+    // transporter.sendMail(mailConfig, function (error, info) {
+    //     if (error) {
+    //         console.log(error);
+    //     }
+    //     console.log('Message is sent');
+    // });
     transporter.sendMail(mailConfig, function (error, info) {
         if (error) {
-            console.log(error);
+            console.error('❌ Fehler beim Versand:', error);
+        } else {
+            console.log('✅ E-Mail gesendet:', info.response);
         }
-        console.log('Message is sent');
     });
+
 };
