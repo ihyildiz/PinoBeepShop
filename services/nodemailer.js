@@ -6,6 +6,7 @@ const hbs = async () => {
 };
 
 exports.nodeMailerSend = async (emailReceiver) => {
+    /******* Vorher über STRATO **********/ 
     // const transporter = nodeMailer.createTransport({
     //     host: 'mail.pinobeep.de',
     //     port: 587,
@@ -19,13 +20,25 @@ exports.nodeMailerSend = async (emailReceiver) => {
     //     }
     // });
 
+    /******* Über GMAIL **********/ 
+    // const transporter = nodeMailer.createTransport({
+    //     service: 'gmail',
+    //     auth: {
+    //       user: 'utivision@gmail.com',
+    //       pass: 'hunc mqmu umyg qzxv' // nicht dein Google-Login!
+    //     }
+    //   });
+
+    // Mailjet 
     const transporter = nodeMailer.createTransport({
-        service: 'gmail',
+        host: 'in-v3.mailjet.com',
+        port: 587,
+        secure: false,
         auth: {
-          user: 'utivision@gmail.com',
-          pass: 'hunc mqmu umyg qzxv' // nicht dein Google-Login!
+        user: '41701af3c6fcffff2ec3edd28d65f107',
+        pass: '72824cc0db7cffe61bff5187d413da35'
         }
-      });
+    });
 
     const Handlebars = await hbs(); // Warte auf den dynamischen Import
 
@@ -42,7 +55,8 @@ exports.nodeMailerSend = async (emailReceiver) => {
     transporter.use('compile', Handlebars(hbsOptions));
 
     const mailConfig = {
-        from: 'PinoBeep <utivision@gmail.com>',
+        // wenn GMAIL: from: 'PinoBeep <utivision@gmail.com>',
+        from: 'PinoBeep <noreply@pinobeep.de>',
         to: emailReceiver,
         subject: 'TEST Email',
         template: 'welcomeMsg',
