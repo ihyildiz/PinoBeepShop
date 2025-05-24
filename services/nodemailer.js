@@ -7,13 +7,16 @@ const hbs = async () => {
 
 exports.nodeMailerSend = async (emailReceiver) => {
     const transporter = nodeMailer.createTransport({
-        host: 'smtp.strato.de',
-        port: 465,
-        secure: true,
+        host: 'mail.pinobeep.de',
+        port: 587,
+        secure: false,
         auth: {
-            user: 'webmaster@pinobeep.de',
-            pass: 'EoN1Px7hqTqF431',
+            user: 'admin@pinobeep.de',
+            pass: 'iStanBu7$3030',
         },
+        tls: {
+          rejectUnauthorized: false
+        }
     });
 
     const Handlebars = await hbs(); // Warte auf den dynamischen Import
@@ -31,7 +34,7 @@ exports.nodeMailerSend = async (emailReceiver) => {
     transporter.use('compile', Handlebars(hbsOptions));
 
     const mailConfig = {
-        from: 'PinoBeep <master@pinoBeep.de>',
+        from: 'PinoBeep <admin@pinoBeep.de>',
         to: emailReceiver,
         subject: 'TEST Email',
         template: 'welcomeMsg',
