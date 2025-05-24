@@ -6,18 +6,26 @@ const hbs = async () => {
 };
 
 exports.nodeMailerSend = async (emailReceiver) => {
-    const transporter = nodeMailer.createTransport({
-        host: 'mail.pinobeep.de',
-        port: 587,
-        secure: false,
+    // const transporter = nodeMailer.createTransport({
+    //     host: 'mail.pinobeep.de',
+    //     port: 587,
+    //     secure: false,
+    //     auth: {
+    //         user: 'admin@pinobeep.de',
+    //         pass: 'iStanBu7$3030',
+    //     },
+    //     tls: {
+    //       rejectUnauthorized: false
+    //     }
+    // });
+
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
         auth: {
-            user: 'admin@pinobeep.de',
-            pass: 'iStanBu7$3030',
-        },
-        tls: {
-          rejectUnauthorized: false
+          user: 'utivision@gmail.com',
+          pass: 'hunc mqmu umyg qzxv' // nicht dein Google-Login!
         }
-    });
+      });
 
     const Handlebars = await hbs(); // Warte auf den dynamischen Import
 
@@ -34,7 +42,7 @@ exports.nodeMailerSend = async (emailReceiver) => {
     transporter.use('compile', Handlebars(hbsOptions));
 
     const mailConfig = {
-        from: 'PinoBeep <admin@pinoBeep.de>',
+        from: 'PinoBeep <utivision@gmail.com>>',
         to: emailReceiver,
         subject: 'TEST Email',
         template: 'welcomeMsg',
