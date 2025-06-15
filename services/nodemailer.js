@@ -1,35 +1,13 @@
 const nodeMailer = require('nodemailer');
+const path = require('path')
 
 // Dynamischer Import von nodemailer-express-handlebars
 const hbs = async () => {
     return (await import('nodemailer-express-handlebars')).default;
 };
 
-exports.nodeMailerSend = async (emailReceiver) => {
-    /******* Vorher über STRATO **********/ 
-    // const transporter = nodeMailer.createTransport({
-    //     host: 'mail.pinobeep.de',
-    //     port: 587,
-    //     secure: false,
-    //     auth: {
-    //         user: 'admin@pinobeep.de',
-    //         pass: 'iStanBu7$3030',
-    //     },
-    //     tls: {
-    //       rejectUnauthorized: false
-    //     }
-    // });
-
-    /******* Über GMAIL **********/ 
-    // const transporter = nodeMailer.createTransport({
-    //     service: 'gmail',
-    //     auth: {
-    //       user: 'utivision@gmail.com',
-    //       pass: 'hunc mqmu umyg qzxv' // nicht dein Google-Login!
-    //     }
-    //   });
-
-    // Mailjet 
+exports.nodeMailerSend = async (emailReceiver, mailTemplate) => {
+   
     const transporter = nodeMailer.createTransport({
         host: 'in-v3.mailjet.com',
         port: 587,
@@ -54,30 +32,37 @@ exports.nodeMailerSend = async (emailReceiver) => {
 
     transporter.use('compile', Handlebars(hbsOptions));
 
+    let configMailTemplate = mailTemplate
+    if (configMailTemplate==="") {
+        configMailTemplate == "welcomeMsg"
+    } 
+
     const mailConfig = {
         // wenn GMAIL: from: 'PinoBeep <utivision@gmail.com>',
         from: 'PinoBeep <noreply@pinobeep.de>',
         to: emailReceiver,
         subject: 'TEST Email',
-        template: 'welcomeMsg',
+        template: configMailTemplate,
         context: {
             userName: 'Hakki Yildiz',
             age: '22',
         },
+        attachments: [
+            {
+              filename: 'about-img1.jpg',
+              path: 'public/images/about/about-img1.jpg', // dein lokales Bild
+              cid: 'logo_cid' // "Content ID", zum Einbinden in der HTML-E-Mail
+            }
+        ]
     };
 
-    // transporter.sendMail(mailConfig, function (error, info) {
-    //     if (error) {
-    //         console.log(error);
-    //     }
-    //     console.log('Message is sent');
-    // });
-    transporter.sendMail(mailConfig, function (error, info) {
-        if (error) {
-            console.error('❌ Fehler beim Versand:', error);
-        } else {
-            console.log('✅ E-Mail gesendet:', info.response);
-        }
-    });
+    try {
+        const info = await transporter.sendMail(mailConfig)
+        console.log('Mail sent:', info.response)
+        return true
+    } catch (error) {
+        console.error('Mailer error:', error)
+        return false
+    }
 
 };

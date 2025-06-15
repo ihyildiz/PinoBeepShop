@@ -16,6 +16,7 @@ const routerIndex = require ('./routes/index')
 const routerAuthor = require ('./routes/authors')
 const routerBook = require ('./routes/books')
 const routerOrder = require ('./routes/orders')
+const routerAdmin = require('./routes/admin')
 
 app.set('view engine', 'ejs')
 app.set ('views', __dirname + '/views')
@@ -27,6 +28,7 @@ app.use('/admin', (req, res, next) => {
     res.locals.layout = 'layouts/admin';
     next();
   });
+
 
 app.use (expressLayouts)
 app.use (methodOverride('_method'))
@@ -46,6 +48,7 @@ app.use('/', routerIndex)
 app.use('/authors', routerAuthor)
 app.use('/books', routerBook)
 app.use('/orders', routerOrder)
+app.use('/admin', routerAdmin)
 
 
 app.listen(process.env.PORT || 3000)
