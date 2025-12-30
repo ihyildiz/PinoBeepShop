@@ -1,9 +1,480 @@
-<h2>Kürzlich Hinzugefügte</h2>
+<!-- Header / Navigation -->
+<header>
+  <nav class="navbar navbar-expand-lg bg-light border-bottom" aria-label="Hauptnavigation">
+    <div class="container">
+      <a class="navbar-brand d-flex flex-column align-items-center" href="#top" aria-label="pinoBeep Startseite">
+        <div class="icon-square-logo d-flex align-items-center justify-content-center mb-1" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+            <path
+              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+            </path>
+            <path d="m9 12 2 2 4-4"></path>
+          </svg>
+        </div>
+        <span class="fw-bold text-center">pinoBeep</span>
+      </a>
 
-<% books.forEach(book => { %>
-    <!-- div><%= book.title %></div>
-    <div>..<%= book.coverImagePath %></div>
-    <div><%= book.coverImageName %></div-->
-    
-    <img height="150" width="100" src="<%= book.coverImagePath%>">   
-<% }) %>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+          <li class="nav-item"><a class="nav-link" href="#vorteile">Vorteile</a></li>
+          <li class="nav-item"><a class="nav-link" href="#details">Details</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+          <li class="nav-item">
+            <a class="btn btn-primary ms-lg-2" href="#checkout">Jetzt kaufen</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Order Status Messages -->
+<div class="container mt-3">
+  <% if (query?.order==='success' ) { %>
+    <div class="alert alert-success alert-dismissible fade show js-auto-dismiss" role="alert">
+      Bestellung erfolgreich abgeschlossen 🎉
+      Eine Bestätigung wurde per E-Mail versendet.
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    <% } %>
+
+      <% if (query?.order==='cancelled' ) { %>
+        <div class="alert alert-warning alert-dismissible fade show d-flex gap-3 align-items-start" role="alert">
+          <i class="bi bi-info-circle-fill fs-4 mt-1 text-warning"></i>
+
+          <div class="flex-grow-1">
+            <strong class="d-block mb-1">Bezahlung abgebrochen</strong>
+
+            <p class="mb-2">
+              Manchmal bleiben Fragen offen.
+              Wenn wir helfen können, melde dich gern bei uns – ganz unverbindlich.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2">
+              <a href="mailto:info@pinobeep.de" class="btn btn-sm btn-outline-primary">
+                <i class="bi bi-envelope me-1"></i>
+                E-Mail schreiben
+              </a>
+
+              <a href="tel:+4917631356098" class="btn btn-sm btn-outline-primary">
+                <i class="bi bi-telephone me-1"></i>
+                +49&nbsp;176&nbsp;3135 6098
+              </a>
+            </div>
+
+            <p class="mt-2 mb-0 small text-muted">
+              Unser Support hilft dir persönlich weiter.
+            </p>
+          </div>
+
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% } %>
+</div>
+<!-- Order Status Messages END -->
+
+<!-- Main Content -->
+<main id="top">
+
+  <!-- Hero -->
+  <section class="section-white py-standard-section" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="row align-items-end">
+        <!-- Text -->
+        <div class="col-12 col-md-5 text-start mt-4">
+
+          <p class="mb-4">
+            <span class="badge rounded-pill text-bg-info uppercase text-primary badge-with-dot">
+              <span class="badge-dot" aria-hidden="true"></span>
+              4. Generation verfügbar
+            </span>
+          </p>
+
+          <h1 id="hero-title" class="font-extrabold mb-4 lh-1">
+            Sicherheit für Ihre <span class="text-primary">Liebsten</span>
+          </h1>
+
+          <p class="lead">
+            Der pinoBeep® Alarmgeber schützt Kleinkinder und Haustiere vor offenen Fenstern, Türen und Schubladen.
+            Einfach, effektiv und zuverlässig.
+          </p>
+          <p class="lead mb-0">
+            Ein deutsches Startup-Produkt, das Sicherheit neu denkt.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mt-5">
+            <a class="btn btn-primary btn-lg fw-bold" href="#checkout">
+              Jetzt bestellen <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-outline-secondary btn-lg" href="#details">
+              Mehr erfahren
+            </a>
+          </div>
+          <div class="alert alert-warning mt-4 small" role="alert">
+            <strong>Hinweis:</strong><br>
+            pinoBeep® ist ein unterstützender Alarmgeber.
+            Das Produkt ersetzt keine Aufsichtspflicht
+            und stellt keine vollständige Sicherheitslösung dar.
+          </div>
+
+        </div>
+
+        <!-- Image -->
+        <div class="col-12 col-md-6 offset-md-1 mt-4 mt-md-0 text-center">
+          <div class="position-relative d-inline-block">
+            <img src="images/pinoBeep_img_promotion_001.jpg" alt="pinoBeep® Alarmgeber Gen 4"
+              class="rounded img-fluid desktop-img" decoding="async" />
+
+            <!-- Sticker -->
+            <div class="position-absolute start-0 bottom-0 sticker-badge">
+              <div class="d-inline-flex align-items-center gap-2 bg-white shadow-lg rounded py-3 px-3">
+                <div
+                  class="d-flex align-items-center justify-content-center rounded-circle bg-success-subtle text-success"
+                  style="width: 36px; height: 36px;" aria-hidden="true">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+
+                <div class="small lh-sm text-start">
+                  <div class="small">Empfohlen für</div>
+                  <div class="fw-bold">Haushalte mit Kleinkindern</div>
+                </div>
+              </div>
+            </div>
+            <!-- /Sticker -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vorteile -->
+  <section id="vorteile" class="section-graylight py-standard-section" aria-labelledby="vorteile-title">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 id="vorteile-title" class="text-primary fw-semibold mb-2 uppercase fs-5">Warum pinoBeep?</h2>
+        <p class="h2 fw-bold mb-2">Sicherheit neu gedacht</p>
+        <p class="text-muted fs-5 mx-auto" style="max-width: 48rem;">
+          Entwickelt, um Ihren Alltag sicherer zu machen, ohne zu stören. Die intelligente Lösung für ein sorgenfreies
+          Zuhause.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body text-start m-3">
+              <div class="icon-circle" aria-hidden="true"><i class="bi bi-bell fs-3"></i></div>
+              <h3 class="h5 card-title fw-bold pt-2">Optimale Lautstärke</h3>
+              <p class="card-text mb-0">
+                Bewusst nicht zu laut gestaltet – ideal für den Hausgebrauch. Weckt keine Kinder auf und verschreckt
+                niemanden.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body text-start m-3">
+              <div class="icon-circle" aria-hidden="true"><i class="bi bi-tools fs-3"></i></div>
+              <h3 class="h5 card-title fw-bold pt-2">Einfache Montage</h3>
+              <p class="card-text mb-0">
+                Kompakte Bauweise ermöglicht kinderleichte Installation an Fenstern, Türen, Gittern und Schränken.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body text-start m-3">
+              <div class="icon-circle" aria-hidden="true"><i class="bi bi-sliders fs-3"></i></div>
+              <h3 class="h5 card-title fw-bold pt-2">Individuell einstellbar</h3>
+              <p class="card-text mb-0">
+                Programmieren Sie Warnsignale und Intervalle nach Ihren Bedürfnissen, bevor der Hauptalarm ertönt.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body text-start m-3">
+              <div class="icon-circle" aria-hidden="true"><i class="bi bi-battery-full fs-3"></i></div>
+              <h3 class="h5 card-title fw-bold pt-2">Lange Laufzeit</h3>
+              <p class="card-text mb-0">
+                Dank effizienter Firmware ist der pinoBeep® extrem sparsam und langlebig im Batteriebetrieb.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body text-start m-3">
+              <div class="icon-circle" aria-hidden="true"><i class="bi bi-shield-check fs-3"></i></div>
+              <h3 class="h5 card-title fw-bold pt-2">Vielseitiger Schutz</h3>
+              <p class="card-text mb-0">
+                Sichert Fenster, Terrassentüren, Schubladen, Treppengitter und mehr zuverlässig ab.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body text-start m-3">
+              <div class="icon-circle" aria-hidden="true"><i class="bi bi-people fs-3"></i></div>
+              <h3 class="h5 card-title fw-bold pt-2">Für jeden Haushalt</h3>
+              <p class="card-text mb-0">
+                Perfekt für Familien mit Kleinkindern, Haustierbesitzer, Kitas und Pflegeeinrichtungen.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <section id="details" class="section-white py-standard-section" aria-labelledby="details-title">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+          <div class="card h-100 shadow-lg p-3 bg-body-tertiary rounded">
+            <div class="card-body text-start m-3">
+              <h2 id="details-title" class="h3 card-title fw-bold pt-1 pb-4">Technische Daten</h2>
+
+              <div class="text-bg-light py-1 px-4 rounded d-flex flex-column gap-2 mb-3">
+                <div class="d-flex">
+                  <div class="align-self-center"><i class="bi bi-gear-fill fs-4 text-primary" aria-hidden="true"></i>
+                  </div>
+                  <div class="py-1 px-4 flex-fill">
+                    <span class="fw-semibold">Firmware</span>
+                    <p class="mb-0 text-muted">Version 3.6 – energieeffizient optimiert</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-bg-light py-1 px-4 rounded d-flex flex-column gap-2 mb-3">
+                <div class="d-flex">
+                  <div class="align-self-center fs-2" aria-hidden="true">🇩🇪</div>
+                  <div class="py-1 px-4 flex-fill">
+                    <span class="fw-semibold">Deutsches Produkt</span>
+                    <p class="mb-0 text-muted">Entwickelt und produziert in Deutschland</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-bg-light py-1 px-4 rounded d-flex flex-column gap-2 mb-3">
+                <div class="d-flex">
+                  <div class="align-self-center"><i class="bi bi-battery-full fs-4 text-primary" aria-hidden="true"></i>
+                  </div>
+                  <div class="py-1 px-4 flex-fill">
+                    <span class="fw-semibold">Stromversorgung</span>
+                    <p class="mb-0 text-muted">Batteriebetrieben (2× AAA)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-bg-light py-1 px-4 rounded d-flex flex-column gap-2 mb-3">
+                <div class="d-flex">
+                  <div class="align-self-center"><i class="bi bi-hash fs-4 text-primary" aria-hidden="true"></i></div>
+                  <div class="py-1 px-4 flex-fill">
+                    <span class="fw-semibold">Generation</span>
+                    <p class="mb-0 text-muted">4. Generation</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-bg-light py-1 px-4 rounded d-flex flex-column gap-2">
+                <div class="d-flex">
+                  <div class="align-self-center"><i class="bi bi-rulers fs-4 text-primary" aria-hidden="true"></i>
+                  </div>
+                  <div class="py-1 px-4 flex-fill">
+                    <span class="fw-semibold">Anwendungsbereiche</span>
+                    <p class="mb-0 text-muted">Fenster, Türen, Schubladen, Schränke, Gitter</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 offset-md-1 py-3 py-md-5">
+          <h2 class="h3 mb-4 fw-bold">Perfektion im Detail</h2>
+          <p class="lead mb-4">
+            Der pinoBeep® Alarmgeber schützt Kleinkinder und Haustiere vor offenen Fenstern, Türen und Schubladen.
+            Einfach, effektiv und zuverlässig – kompakt und schnell montiert.
+          </p>
+
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-start mb-3">
+              <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+              <span>Sofort einsatzbereit ohne aufwendige Installation</span>
+            </li>
+            <li class="d-flex align-items-start mb-3">
+              <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+              <span>Kein Bohren notwendig (abhängig von Montageart)</span>
+            </li>
+            <li class="d-flex align-items-start mb-3">
+              <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+              <span>Warnt nur wenn nötig – intelligente Zeitsteuerung</span>
+            </li>
+            <li class="d-flex align-items-start mb-3">
+              <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+              <span>Robustes Gehäuse für den täglichen Einsatz</span>
+            </li>
+            <li class="d-flex align-items-start mb-0">
+              <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+              <span>Kindersicheres Batteriefach</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checkout -->
+  <section id="checkout" class="section-graylight py-standard-section" aria-labelledby="checkout-title">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-12 col-md-6 text-start mt-4">
+          <h2 id="checkout-title" class="mb-3">Bestellen Sie jetzt</h2>
+          <p class="lead mb-4" style="max-width: 36rem;">
+            Sichern Sie sich den pinoBeep® der 4. Generation zum Einführungspreis.
+          </p>
+
+          <div class="card shadow-sm rounded-4 overflow-hidden">
+            <div class="card-body bg-body-tertiary">
+              <div class="d-flex flex-column flex-sm-row gap-3 align-items-start">
+                <img src="images/pinoBeep_img_promotion_001.jpg" alt="Produktbild pinoBeep® Gen 4" class="rounded-3"
+                  style="width: 160px; height: auto;" loading="lazy" decoding="async" />
+
+                <div class="flex-grow-1 w-100">
+                  <div class="d-flex justify-content-between gap-3">
+                    <div>
+                      <h3 class="h5 fw-bold mb-1">pinoBeep® Gen 4</h3>
+                      <p class="text-muted small mb-2">
+                        Der intelligente Alarmgeber für Fenster, Türen und Schubladen.
+                      </p>
+                    </div>
+                    <div class="text-end">
+                      <div class="fw-bold text-primary fs-5 text-nowrap">29,99 €</div>
+                    </div>
+                  </div>
+
+                  <hr class="my-3" />
+
+                  <div class="d-flex justify-content-between">
+                    <span class="fw-semibold">Versandkosten</span>
+                    <span class="fw-bold text-primary">0,- €</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-footer bg-body border-top">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold fs-5">Gesamtsumme</span>
+                <span class="fw-bold fs-5">29,99 €</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="list-unstyled mt-5">
+            <li class="d-flex align-items-start mb-2">
+              <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+              <span>Inklusive Batterien und Montagematerial</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+              <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+              <span>Schneller Versand innerhalb von 2–3 Werktagen</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+              <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+              <span>Sichere Bezahlung</span>
+            </li>
+            <li class="d-flex align-items-start mb-0">
+              <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+              <span>30 Tage Rückgaberecht</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-6 mt-4">
+          <div class="card h-100 shadow-lg p-3 bg-body-tertiary rounded">
+            <div class="card-body">
+              <h2 class="h3 mt-2 mb-4">Checkout &amp; Lieferung</h2>
+
+              <div class="alert alert-primary d-flex gap-3 align-items-start rounded-3 mb-4" role="alert">
+                <i class="bi bi-paypal fs-3" aria-hidden="true"></i>
+                <div>
+                  <strong>Aktuell nur PayPal</strong>
+                  <p class="mb-0 small">
+                    Der Kauf wird derzeit ausschließlich über PayPal abgewickelt.
+                  </p>
+                </div>
+              </div>
+
+              <ul class="list-unstyled mb-4">
+                <li class="d-flex gap-2 mb-2">
+                  <div class="icon-circle-small me-1" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                  <span>E-Mail-Adresse &amp; Lieferanschrift werden aus Ihrem PayPal-Konto übernommen</span>
+                </li>
+                <li class="d-flex gap-2 mb-2">
+                  <div class="icon-circle-small me-1" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                  <span>Keine zusätzliche Registrierung notwendig</span>
+                </li>
+                <li class="d-flex gap-2">
+                  <div class="icon-circle-small me-1" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                  <span>Automatische Bestätigungs-E-Mail nach Abschluss</span>
+                </li>
+              </ul>
+
+              <div class="text-center mt-4">
+                <!-- Wenn es wirklich zahlt: in ein <a> mit echter PayPal-URL oder Form submit umwandeln -->
+                <form action="/orders/pay" method="POST">
+                  <button type="submit"
+                    class="btn btn-primary btn-lg w-100 rounded-3 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-paypal fs-4" aria-hidden="true"></i>
+                    Mit PayPal bezahlen
+                  </button>
+                </form>
+
+                <p class="text-muted small mt-3 mb-0">
+                  Sie werden sicher zu PayPal weitergeleitet
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="alert alert-warning mt-4 small" role="alert">
+            <strong>Hinweis:</strong><br>
+            pinoBeep® ist ein unterstützender Alarmgeber.
+            Das Produkt ersetzt keine Aufsichtspflicht
+            und stellt keine vollständige Sicherheitslösung dar.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-indigo py-standard-section" aria-labelledby="cta-title">
+    <div class="container text-center">
+      <h2 id="cta-title" class="text-white fw-bold mb-4 fs-2">Bereit für mehr Sicherheit?</h2>
+      <p class="text-white mb-4 fs-5">
+        pinoBeep® ist mehr als nur ein Alarm. Es ist die Gewissheit, dass Ihre Liebsten geschützt sind.
+      </p>
+      <a class="btn btn-light btn-lg" href="#checkout">Jetzt sichern</a>
+    </div>
+  </section>
+
+</main>

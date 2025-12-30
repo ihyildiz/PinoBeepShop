@@ -1,0 +1,62 @@
+<h2>Danke für deine Bestellung, {{order.buyer.firstName}}!</h2>
+<p class="muted">
+  Wir haben deine Bestellung erhalten und bestätigen den Zahlungseingang.
+</p>
+
+<p>
+  <strong>Bestellnummer:</strong> {{order.id}}<br/>
+  <strong>Status:</strong> {{order.status}}<br/>
+  <strong>Datum:</strong> {{order.date}}
+</p>
+
+<h3>Rechnung (HTML)</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Produkt</th>
+      <th class="right">Menge</th>
+      <th class="right">Einzelpreis</th>
+      <th class="right">Summe</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each order.items}}
+      <tr>
+        <td>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <img
+                src="cid:{{this.imageCid}}"
+                alt="Produktbild"
+                width="64"
+                height="64"
+                style="width:64px; height:64px; border-radius:10px; object-fit:cover; display:block;"
+/>
+            <div>
+              <div><strong>{{this.name}}</strong></div>
+              <div class="muted">Artikelposition</div>
+            </div>
+          </div>
+        </td>
+        <td class="right">{{this.qty}}</td>
+        <td class="right">{{../order.currency}} {{this.unitPrice}}</td>
+        <td class="right">{{../order.currency}} {{this.unitPrice}}</td>
+      </tr>
+    {{/each}}
+
+    <tr><td colspan="3" class="right">Zwischensumme</td><td class="right">{{order.currency}} {{order.subtotal}}</td></tr>
+    <tr><td colspan="3" class="right">Versand</td><td class="right">{{order.currency}} {{order.shippingCost}}</td></tr>
+    <tr class="total-row"><td colspan="3" class="right">Gesamt</td><td class="right">{{order.currency}} {{order.total}}</td></tr>
+  </tbody>
+</table>
+
+<h3>Lieferadresse</h3>
+<p>
+  {{order.shipping.name}}<br/>
+  {{order.shipping.line1}}<br/>
+  {{order.shipping.zip}} {{order.shipping.city}}<br/>
+  {{order.shipping.country}}
+</p>
+
+<p class="muted">
+  Hinweis: Diese Rechnung wird per E-Mail übermittelt. Bei Fragen antworte bitte auf diese Nachricht oder kontaktiere unseren Support.
+</p>

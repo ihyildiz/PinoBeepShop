@@ -4,6 +4,11 @@ npm init -y
 npm install express ejs express-ejs-layouts
 npm i --save-dev nodemon
 npm i mongoose  
+
+        MongoDB START/STOP: 
+            brew services start mongodb/brew/mongodb-community
+            brew services stop mongodb/brew/mongodb-community
+            
 npm i --save-dev dotenv 
 npm i body-parser
 =========================
@@ -11,4 +16,22 @@ npm i body-parser
 PART 2
 -------------------------
 npm i multer
+npm uninstall multer
+=========================
 
+
+Branch v2-with-filepond
+-----------------------
+npm i method-override 
+
+
+Branch v3-real-shop
+-----------------------
+npm i axios
+npm i nodemailer
+npm i nodemailer-express-handlebars
+
+Send Image in Email
+-------------------
+Console:    base64 -i about-img1.jpg -o output.txt
+html:        <img src="data:image/jpeg;base64, DEIN_BASE64_CODE" alt="any image">

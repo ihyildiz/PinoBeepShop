@@ -1,0 +1,13 @@
+<!-- views/admin/dashboard.ejs -->
+<h1><%= title %></h1>
+<p>Willkommen im Adminbereich</p>
+
+<button id="sendMail">Mail senden</button>
+
+<script>
+  document.getElementById('sendMail').addEventListener('click', async () => {
+    const response = await fetch('/admin/mail')
+    const text = await response.text()
+    alert(text)
+  })
+</script>
