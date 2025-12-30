@@ -55,6 +55,10 @@ generateAccessToken(
  * 
  * @returns approved URL zu Paypals Bezahlseite
  */
+
+const products = require('../config/products');
+const p = products.pinobeep_two_color_45v;
+
 exports.createOrder = async  () => {
     const accessToken = await generateAccessToken()
     const response = await axios ({
@@ -70,26 +74,26 @@ exports.createOrder = async  () => {
                 {
                     items: [
                         {
-                            name: 'PinoBeep in Grün mit 4,5V',
-                            description: 'PinoBeep Original in Grün, mit 4,5V Battarie-Versorgung',
+                            name: p.name,
+                            description: p.description,
                             quantity: 1,
                             unit_amount: {
-                                currency_code: 'EUR',
-                                value:'22.90'
+                                currency_code: p.currency,
+                                value: p.price
                             }   
                         }
                     ],
 
                     amount:{
-                        currency_code: "EUR",
-                        value: '22.90',
+                        currency_code: p.currency,
+                        value: p.price,
                         breakdown: {
                             item_total: {
-                                currency_code: 'EUR',
-                                value: '22.90'
+                                currency_code: p.currency,
+                                value: p.price
                             }
                         }
-                    },
+                    }/*,
                     shipping: {
                         name: {
                             full_name: "Max Mustermann"
@@ -102,7 +106,7 @@ exports.createOrder = async  () => {
                             postal_code: "12345",
                             country_code: "DE"
                         }
-                    }
+                    }*/
                 }
             ],
 

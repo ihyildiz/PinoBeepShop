@@ -1,0 +1,48 @@
+<h2>Neue Bestellung</h2>
+<p class="muted">
+  Bestell-ID: <strong>{{order.id}}</strong>
+  &nbsp;•&nbsp;
+  Status: <span class="badge">{{order.status}}</span>
+  &nbsp;•&nbsp;
+  {{order.date}}
+</p>
+
+<h3>Käufer</h3>
+<table>
+  <tr><th>Vorname</th><td>{{order.buyer.firstName}}</td></tr>
+  <tr><th>Nachname</th><td>{{order.buyer.lastName}}</td></tr>
+  <tr><th>E-Mail</th><td>{{order.buyer.email}}</td></tr>
+  <tr><th>Payer-ID</th><td>{{order.buyer.payerId}}</td></tr>
+</table>
+
+<h3>Lieferadresse</h3>
+<table>
+  <tr><th>Name</th><td>{{order.shipping.name}}</td></tr>
+  <tr><th>Straße</th><td>{{order.shipping.line1}}</td></tr>
+  <tr><th>PLZ / Ort</th><td>{{order.shipping.zip}} {{order.shipping.city}}</td></tr>
+  <tr><th>Bundesland</th><td>{{order.shipping.state}}</td></tr>
+  <tr><th>Land</th><td>{{order.shipping.country}}</td></tr>
+</table>
+
+<h3>Bestellübersicht</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Artikel</th>
+      <th class="right">Menge</th>
+      <th class="right">Preis</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each order.items}}
+      <tr>
+        <td>{{this.name}}</td>
+        <td class="right">{{this.qty}}</td>
+        <td class="right">{{../order.currency}} {{this.unitPrice}}</td>
+      </tr>
+    {{/each}}
+    <tr><td colspan="2" class="right">Zwischensumme</td><td class="right">{{order.currency}} {{order.subtotal}}</td></tr>
+    <tr><td colspan="2" class="right">Versand</td><td class="right">{{order.currency}} {{order.shippingCost}}</td></tr>
+    <tr class="total-row"><td colspan="2" class="right">Gesamt</td><td class="right">{{order.currency}} {{order.total}}</td></tr>
+  </tbody>
+</table>
