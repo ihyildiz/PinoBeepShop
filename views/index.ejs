@@ -1,745 +1,434 @@
-
-
-  <!-- Start header Area -->
-  <section id="hero-area" class="header-area header-eight">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 col-md-12 col-12">
-          <div class="header-content">
-            <h1>Corporate & Business Site Template by Ayro UI.</h1>
-            <p>
-              We are a digital agency that helps brands to achieve their
-              business outcomes. We see technology as a tool to create amazing
-              things.
-
-              <div class="fa-1x">
-                <i class="fa-solid fa-circle-plus fa-beat"></i>
-                <i class="fa-solid fa-heart fa-beat"></i>
-                <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
-                <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 2s;"></i>
-                <i class="fa-solid fa-heart fa-beat" style="--fa-beat-scale: 2.0;"></i>
-                <i class="fa-solid fa-circle-check"></i>
-                <i class="fa-duotone fa-regular fa-circle-check" style="--fa-primary-color: #000000; --fa-secondary-color: #ffffff;"></i>
-              </div>
-
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-
-              <h1>Example heading <span class="badge text-bg-secondary">New</span></h1>
-
-              <h2>Kürzlich Hinzugefügte</h2>
-
-              <% books.forEach(book => { %>
-                <!-- div><%= book.title %></div>
-                <div>..<%= book.coverImagePath %></div>
-                <div><%= book.coverImageName %></div-->
-                <a href="/books/<%= book.id%>">
-                    <img height="150" width="100" src="<%= book.coverImagePath%>">   
-                </a>
-              <% }) %>
-            </p>
-            <div>
-              <h1>Kenya 7s Jersey</h1>
-              <h2>Buy now $30</h2>
-              <form action="/orders/pay" method="POST">
-                  <input type="submit" class="btn primary-btn" value="Buy">
-              </form>
-            </div>
-            <div class="button">
-              <a href="javascript:void(0)" class="btn primary-btn">Get Started</a>
-              <a href="https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM"
-                class="glightbox video-button">
-                <span class="btn icon-btn rounded-full">
-                  <i class="lni lni-play"></i>
-                </span>
-                <span class="text">Watch Intro</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12 col-12">
-          <div class="header-image">
-            <img src="/images/header/hero-image.jpg" alt="#" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End header Area -->
-
-  <!--====== ABOUT FIVE PART START ======-->
-
-  <section class="about-area about-five">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 col-12">
-          <div class="about-image-five">
-            <svg class="shape" width="106" height="134" viewBox="0 0 106 134" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <circle cx="1.66654" cy="1.66679" r="1.66667" fill="#DADADA" />
-              <circle cx="1.66654" cy="16.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="1.66654" cy="31.0001" r="1.66667" fill="#DADADA" />
-              <circle cx="1.66654" cy="45.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="1.66654" cy="60.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="1.66654" cy="88.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="1.66654" cy="117.667" r="1.66667" fill="#DADADA" />
-              <circle cx="1.66654" cy="74.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="1.66654" cy="103" r="1.66667" fill="#DADADA" />
-              <circle cx="1.66654" cy="132" r="1.66667" fill="#DADADA" />
-              <circle cx="16.3333" cy="1.66679" r="1.66667" fill="#DADADA" />
-              <circle cx="16.3333" cy="16.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="16.3333" cy="31.0001" r="1.66667" fill="#DADADA" />
-              <circle cx="16.3333" cy="45.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="16.333" cy="60.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="16.333" cy="88.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="16.333" cy="117.667" r="1.66667" fill="#DADADA" />
-              <circle cx="16.333" cy="74.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="16.333" cy="103" r="1.66667" fill="#DADADA" />
-              <circle cx="16.333" cy="132" r="1.66667" fill="#DADADA" />
-              <circle cx="30.9998" cy="1.66679" r="1.66667" fill="#DADADA" />
-              <circle cx="74.6665" cy="1.66679" r="1.66667" fill="#DADADA" />
-              <circle cx="30.9998" cy="16.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="74.6665" cy="16.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="30.9998" cy="31.0001" r="1.66667" fill="#DADADA" />
-              <circle cx="74.6665" cy="31.0001" r="1.66667" fill="#DADADA" />
-              <circle cx="30.9998" cy="45.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="74.6665" cy="45.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="31" cy="60.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="74.6668" cy="60.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="31" cy="88.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="74.6668" cy="88.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="31" cy="117.667" r="1.66667" fill="#DADADA" />
-              <circle cx="74.6668" cy="117.667" r="1.66667" fill="#DADADA" />
-              <circle cx="31" cy="74.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="74.6668" cy="74.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="31" cy="103" r="1.66667" fill="#DADADA" />
-              <circle cx="74.6668" cy="103" r="1.66667" fill="#DADADA" />
-              <circle cx="31" cy="132" r="1.66667" fill="#DADADA" />
-              <circle cx="74.6668" cy="132" r="1.66667" fill="#DADADA" />
-              <circle cx="45.6665" cy="1.66679" r="1.66667" fill="#DADADA" />
-              <circle cx="89.3333" cy="1.66679" r="1.66667" fill="#DADADA" />
-              <circle cx="45.6665" cy="16.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="89.3333" cy="16.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="45.6665" cy="31.0001" r="1.66667" fill="#DADADA" />
-              <circle cx="89.3333" cy="31.0001" r="1.66667" fill="#DADADA" />
-              <circle cx="45.6665" cy="45.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="89.3333" cy="45.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="45.6665" cy="60.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="89.3333" cy="60.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="45.6665" cy="88.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="89.3333" cy="88.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="45.6665" cy="117.667" r="1.66667" fill="#DADADA" />
-              <circle cx="89.3333" cy="117.667" r="1.66667" fill="#DADADA" />
-              <circle cx="45.6665" cy="74.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="89.3333" cy="74.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="45.6665" cy="103" r="1.66667" fill="#DADADA" />
-              <circle cx="89.3333" cy="103" r="1.66667" fill="#DADADA" />
-              <circle cx="45.6665" cy="132" r="1.66667" fill="#DADADA" />
-              <circle cx="89.3333" cy="132" r="1.66667" fill="#DADADA" />
-              <circle cx="60.3333" cy="1.66679" r="1.66667" fill="#DADADA" />
-              <circle cx="104" cy="1.66679" r="1.66667" fill="#DADADA" />
-              <circle cx="60.3333" cy="16.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="104" cy="16.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="60.3333" cy="31.0001" r="1.66667" fill="#DADADA" />
-              <circle cx="104" cy="31.0001" r="1.66667" fill="#DADADA" />
-              <circle cx="60.3333" cy="45.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="104" cy="45.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="60.333" cy="60.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="104" cy="60.3335" r="1.66667" fill="#DADADA" />
-              <circle cx="60.333" cy="88.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="104" cy="88.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="60.333" cy="117.667" r="1.66667" fill="#DADADA" />
-              <circle cx="104" cy="117.667" r="1.66667" fill="#DADADA" />
-              <circle cx="60.333" cy="74.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="104" cy="74.6668" r="1.66667" fill="#DADADA" />
-              <circle cx="60.333" cy="103" r="1.66667" fill="#DADADA" />
-              <circle cx="104" cy="103" r="1.66667" fill="#DADADA" />
-              <circle cx="60.333" cy="132" r="1.66667" fill="#DADADA" />
-              <circle cx="104" cy="132" r="1.66667" fill="#DADADA" />
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-light border-bottom" aria-label="Hauptnavigation">
+      <div class="container">
+        <a class="navbar-brand d-flex flex-column align-items-center" href="#top" aria-label="pinoBeep Startseite">
+          <div class="icon-square-logo d-flex align-items-center justify-content-center mb-1" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+              <path
+                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+              </path>
+              <path d="m9 12 2 2 4-4"></path>
             </svg>
-            <img src="images/about/about-img1.jpg" alt="about" />
           </div>
-        </div>
-        <div class="col-lg-6 col-12">
-          <div class="about-five-content">
-            <h6 class="small-title text-lg">OUR STORY</h6>
-            <h2 class="main-title fw-bold">Our team comes with the experience and knowledge</h2>
-            <div class="about-five-tab">
-              <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                  <button class="nav-link active" id="nav-who-tab" data-bs-toggle="tab" data-bs-target="#nav-who"
-                    type="button" role="tab" aria-controls="nav-who" aria-selected="true">Who We Are</button>
-                  <button class="nav-link" id="nav-vision-tab" data-bs-toggle="tab" data-bs-target="#nav-vision"
-                    type="button" role="tab" aria-controls="nav-vision" aria-selected="false">our Vision</button>
-                  <button class="nav-link" id="nav-history-tab" data-bs-toggle="tab" data-bs-target="#nav-history"
-                    type="button" role="tab" aria-controls="nav-history" aria-selected="false">our History</button>
-                </div>
-              </nav>
-              <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-who" role="tabpanel" aria-labelledby="nav-who-tab">
-                  <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                    when
-                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                    distribution of letters, look like readable English.</p>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have in some
-                    form,
-                    by injected humour.</p>
-                </div>
-                <div class="tab-pane fade" id="nav-vision" role="tabpanel" aria-labelledby="nav-vision-tab">
-                  <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                    when
-                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                    distribution of letters, look like readable English.</p>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have in some
-                    form,
-                    by injected humour.</p>
-                </div>
-                <div class="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">
-                  <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                    when
-                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                    distribution of letters, look like readable English.</p>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have in some
-                    form,
-                    by injected humour.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <span class="fw-bold text-center">pinoBeep</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+            <li class="nav-item"><a class="nav-link" href="#vorteile">Vorteile</a></li>
+            <li class="nav-item"><a class="nav-link" href="#details">Details</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+            <li class="nav-item">
+              <a class="btn btn-primary ms-lg-2" href="#checkout">Jetzt kaufen</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    <!-- container -->
-  </section>
+    </nav>
+  </header>
 
-  <!--====== ABOUT FIVE PART ENDS ======-->
+<!-- Main Content -->
+  <main id="top">
 
-  <!-- ===== service-area start ===== -->
-  <section id="services" class="services-area services-eight">
-    <!--======  Start Section Title Five ======-->
-    <div class="section-title-five">
+    <!-- Hero -->
+    <section class="section-white py-standard-section" aria-labelledby="hero-title">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="content">
-              <h6>Services</h6>
-              <h2 class="fw-bold">Our Best Services</h2>
-              <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- row -->
-      </div>
-      <!-- container -->
-    </div>
-    <!--======  End Section Title Five ======-->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-capsule"></i>
-            </div>
-            <div class="service-content">
-              <h4>Refreshing Design</h4>
-              <p>
-                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                eirmod tempor ividunt labor dolore magna.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-bootstrap"></i>
-            </div>
-            <div class="service-content">
-              <h4>Solid Bootstrap 5</h4>
-              <p>
-                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                eirmod tempor ividunt labor dolore magna.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-shortcode"></i>
-            </div>
-            <div class="service-content">
-              <h4>100+ Components</h4>
-              <p>
-                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                eirmod tempor ividunt labor dolore magna.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-dashboard"></i>
-            </div>
-            <div class="service-content">
-              <h4>Speed Optimized</h4>
-              <p>
-                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                eirmod tempor ividunt labor dolore magna.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-layers"></i>
-            </div>
-            <div class="service-content">
-              <h4>Fully Customizable</h4>
-              <p>
-                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                eirmod tempor ividunt labor dolore magna.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-reload"></i>
-            </div>
-            <div class="service-content">
-              <h4>Regular Updates</h4>
-              <p>
-                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                eirmod tempor ividunt labor dolore magna.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ===== service-area end ===== -->
+        <div class="row align-items-end">
+          <!-- Text -->
+          <div class="col-12 col-md-5 text-start mt-4">
 
-
-  <!-- Start Pricing  Area -->
-  <section id="pricing" class="pricing-area pricing-fourteen">
-    <!--======  Start Section Title Five ======-->
-    <div class="section-title-five">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="content">
-              <h6>Pricing</h6>
-              <h2 class="fw-bold">Pricing & Plans</h2>
-              <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- row -->
-      </div>
-      <!-- container -->
-    </div>
-    <!--======  End Section Title Five ======-->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="pricing-style-fourteen">
-            <div class="table-head">
-              <h6 class="title">Starter</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and industry.</p>
-                <div class="price">
-                  <h2 class="amount">
-                    <span class="currency">$</span>0<span class="duration">/mo </span>
-                  </h2>
-                </div>
-            </div>
-
-            <div class="light-rounded-buttons">
-              <a href="javascript:void(0)" class="btn primary-btn-outline">
-                Start free trial
-              </a>
-            </div>
-
-            <div class="table-content">
-              <ul class="table-list">
-                <li> <i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
-                <li> <i class="lni lni-checkmark-circle deactive"></i> Morbi leo risus.</li>
-                <li> <i class="lni lni-checkmark-circle deactive"></i> Excepteur sint occaecat velit.</li>
-                <li> <i class="lni lni-heart"></i> Heart Beat</li>
-              
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="pricing-style-fourteen middle">
-            <div class="table-head">
-              <h6 class="title">Exclusive</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and industry.</p>
-                <div class="price">
-                  <h2 class="amount">
-                    <span class="currency">$</span>99<span class="duration">/mo </span>
-                  </h2>
-                </div>
-            </div>
-
-            <div class="light-rounded-buttons">
-              <a href="javascript:void(0)" class="btn primary-btn">
-                Start free trial
-              </a>
-            </div>
-
-            <div class="table-content">
-              <ul class="table-list">
-                <li> <i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Morbi leo risus.</li>
-                <li> <i class="lni lni-checkmark-circle deactive"></i> Excepteur sint occaecat velit.</li>
-                <li><i class="fa-solid fa-user-check"></i>Checked by users</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="pricing-style-fourteen">
-            <div class="table-head">
-              <h6 class="title">Premium</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and industry.</p>
-                <div class="price">
-                  <h2 class="amount">
-                    <span class="currency">$</span>150<span class="duration">/mo </span>
-                  </h2>
-                </div>
-            </div>
-
-            <div class="light-rounded-buttons">
-              <a href="javascript:void(0)" class="btn primary-btn-outline">
-                Start free trial
-              </a>
-            </div>
-
-            <div class="table-content">
-              <ul class="table-list">
-                <li> <i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Morbi leo risus.</li>
-                <li> <i class="lni lni-checkmark-circle"></i> Excepteur sint occaecat velit.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--/ End Pricing  Area -->
-
-
-
-  <!-- Start Cta Area -->
-  <section id="call-action" class="call-action">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xxl-6 col-xl-7 col-lg-8 col-md-9">
-          <div class="inner-content">
-            <h2>We love to make perfect <br />solutions for your business</h2>
-            <p>
-              Why I say old chap that is, spiffing off his nut cor blimey
-              guvnords geeza<br />
-              bloke knees up bobby, sloshed arse William cack Richard. Bloke
-              fanny around chesed of bum bag old lost the pilot say there
-              spiffing off his nut.
+            <p class="mb-4">
+              <span class="badge rounded-pill text-bg-info uppercase text-primary badge-with-dot">
+                <span class="badge-dot" aria-hidden="true"></span>
+                4. Generation verfügbar
+              </span>
             </p>
-            <div class="light-rounded-buttons">
-              <a href="javascript:void(0)" class="btn primary-btn-outline">Get Started</a>
+
+            <h1 id="hero-title" class="font-extrabold mb-4 lh-1">
+              Sicherheit für Ihre <span class="text-primary">Liebsten</span>
+            </h1>
+
+            <p class="lead">
+              Der pinoBeep® Alarmgeber schützt Kleinkinder und Haustiere vor offenen Fenstern, Türen und Schubladen.
+              Einfach, effektiv und zuverlässig.
+            </p>
+            <p class="lead mb-0">
+              Ein deutsches Startup-Produkt, das Sicherheit neu denkt.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 mt-5">
+              <a class="btn btn-primary btn-lg fw-bold" href="#checkout">
+                Jetzt bestellen <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
+              <a class="btn btn-outline-secondary btn-lg" href="#details">
+                Mehr erfahren
+              </a>
+            </div>
+            <div class="alert alert-warning mt-4 small" role="alert">
+              <strong>Hinweis:</strong><br>
+              pinoBeep® ist ein unterstützender Alarmgeber.
+              Das Produkt ersetzt keine Aufsichtspflicht
+              und stellt keine vollständige Sicherheitslösung dar.
+            </div>
+
+          </div>
+
+          <!-- Image -->
+          <div class="col-12 col-md-6 offset-md-1 mt-4 mt-md-0 text-center">
+            <div class="position-relative d-inline-block">
+              <img src="images/pinoBeep_img_promotion_001.jpg" alt="pinoBeep® Alarmgeber Gen 4"
+                class="rounded img-fluid desktop-img" decoding="async" />
+
+              <!-- Sticker -->
+              <div class="position-absolute start-0 bottom-0 sticker-badge">
+                <div class="d-inline-flex align-items-center gap-2 bg-white shadow-lg rounded py-3 px-3">
+                  <div
+                    class="d-flex align-items-center justify-content-center rounded-circle bg-success-subtle text-success"
+                    style="width: 36px; height: 36px;" aria-hidden="true">
+                    <i class="bi bi-shield-check"></i>
+                  </div>
+
+                  <div class="small lh-sm text-start">
+                    <div class="small">Empfohlen für</div>
+                    <div class="fw-bold">Haushalte mit Kleinkindern</div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Sticker -->
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- End Cta Area -->
+    </section>
 
-
-
-  <!-- Start Latest News Area -->
-  <div id="blog" class="latest-news-area section">
-    <!--======  Start Section Title Five ======-->
-    <div class="section-title-five">
+    <!-- Vorteile -->
+    <section id="vorteile" class="section-graylight py-standard-section" aria-labelledby="vorteile-title">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="content">
-              <h6>latest news</h6>
-              <h2 class="fw-bold">Latest News & Blog</h2>
-              <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form.
-              </p>
-            </div>
-          </div>
+        <div class="text-center mb-5">
+          <h2 id="vorteile-title" class="text-primary fw-semibold mb-2 uppercase fs-5">Warum pinoBeep?</h2>
+          <p class="h2 fw-bold mb-2">Sicherheit neu gedacht</p>
+          <p class="text-muted fs-5 mx-auto" style="max-width: 48rem;">
+            Entwickelt, um Ihren Alltag sicherer zu machen, ohne zu stören. Die intelligente Lösung für ein sorgenfreies
+            Zuhause.
+          </p>
         </div>
-        <!-- row -->
-      </div>
-      <!-- container -->
-    </div>
-    <!--======  End Section Title Five ======-->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Single News -->
-          <div class="single-news">
-            <div class="image">
-              <a href="javascript:void(0)"><img class="thumb" src="images/blog/1.jpg" alt="Blog" /></a>
-              <div class="meta-details">
-                <img class="thumb" src="images/blog/b6.jpg" alt="Author" />
-                <span>BY TIM NORTON</span>
-              </div>
-            </div>
-            <div class="content-body">
-              <h4 class="title">
-                <a href="javascript:void(0)"> Make your team a Design driven company </a>
-              </h4>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard.
-              </p>
-            </div>
-          </div>
-          <!-- End Single News -->
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Single News -->
-          <div class="single-news">
-            <div class="image">
-              <a href="javascript:void(0)"><img class="thumb" src="images/blog/2.jpg" alt="Blog" /></a>
-              <div class="meta-details">
-                <img class="thumb" src="images/blog/b6.jpg" alt="Author" />
-                <span>BY TIM NORTON</span>
-              </div>
-            </div>
-            <div class="content-body">
-              <h4 class="title">
-                <a href="javascript:void(0)">
-                  The newest web framework that changed the world
-                </a>
-              </h4>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard.
-              </p>
-            </div>
-          </div>
-          <!-- End Single News -->
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Single News -->
-          <div class="single-news">
-            <div class="image">
-              <a href="javascript:void(0)"><img class="thumb" src="/images/blog/3.jpg" alt="Blog" /></a>
-              <div class="meta-details">
-                <img class="thumb" src="/images/blog/b6.jpg" alt="Author" />
-                <span>BY TIM NORTON</span>
-              </div>
-            </div>
-            <div class="content-body">
-              <h4 class="title">
-                <a href="javascript:void(0)">
-                  5 ways to improve user retention for your startup
-                </a>
-              </h4>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard.
-              </p>
-            </div>
-          </div>
-          <!-- End Single News -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Latest News Area -->
 
-  <!-- Start Brand Area -->
-  <div id="clients" class="brand-area section">
-    <!--======  Start Section Title Five ======-->
-    <div class="section-title-five">
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <article class="card h-100 shadow-sm">
+              <div class="card-body text-start m-3">
+                <div class="icon-circle" aria-hidden="true"><i class="bi bi-bell fs-3"></i></div>
+                <h3 class="h5 card-title fw-bold pt-2">Optimale Lautstärke</h3>
+                <p class="card-text mb-0">
+                  Bewusst nicht zu laut gestaltet – ideal für den Hausgebrauch. Weckt keine Kinder auf und verschreckt
+                  niemanden.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <article class="card h-100 shadow-sm">
+              <div class="card-body text-start m-3">
+                <div class="icon-circle" aria-hidden="true"><i class="bi bi-tools fs-3"></i></div>
+                <h3 class="h5 card-title fw-bold pt-2">Einfache Montage</h3>
+                <p class="card-text mb-0">
+                  Kompakte Bauweise ermöglicht kinderleichte Installation an Fenstern, Türen, Gittern und Schränken.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <article class="card h-100 shadow-sm">
+              <div class="card-body text-start m-3">
+                <div class="icon-circle" aria-hidden="true"><i class="bi bi-sliders fs-3"></i></div>
+                <h3 class="h5 card-title fw-bold pt-2">Individuell einstellbar</h3>
+                <p class="card-text mb-0">
+                  Programmieren Sie Warnsignale und Intervalle nach Ihren Bedürfnissen, bevor der Hauptalarm ertönt.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <article class="card h-100 shadow-sm">
+              <div class="card-body text-start m-3">
+                <div class="icon-circle" aria-hidden="true"><i class="bi bi-battery-full fs-3"></i></div>
+                <h3 class="h5 card-title fw-bold pt-2">Lange Laufzeit</h3>
+                <p class="card-text mb-0">
+                  Dank effizienter Firmware ist der pinoBeep® extrem sparsam und langlebig im Batteriebetrieb.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <article class="card h-100 shadow-sm">
+              <div class="card-body text-start m-3">
+                <div class="icon-circle" aria-hidden="true"><i class="bi bi-shield-check fs-3"></i></div>
+                <h3 class="h5 card-title fw-bold pt-2">Vielseitiger Schutz</h3>
+                <p class="card-text mb-0">
+                  Sichert Fenster, Terrassentüren, Schubladen, Treppengitter und mehr zuverlässig ab.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <article class="card h-100 shadow-sm">
+              <div class="card-body text-start m-3">
+                <div class="icon-circle" aria-hidden="true"><i class="bi bi-people fs-3"></i></div>
+                <h3 class="h5 card-title fw-bold pt-2">Für jeden Haushalt</h3>
+                <p class="card-text mb-0">
+                  Perfekt für Familien mit Kleinkindern, Haustierbesitzer, Kitas und Pflegeeinrichtungen.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details -->
+    <section id="details" class="section-white py-standard-section" aria-labelledby="details-title">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="content">
-              <h6>Meet our Clients</h6>
-              <h2 class="fw-bold">Our Awesome Clients</h2>
-              <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- row -->
-      </div>
-      <!-- container -->
-    </div>
-    <!--======  End Section Title Five ======-->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2 col-12">
-          <div class="clients-logos">
-            <div class="single-image">
-              <img src="images/client-logo/graygrids.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="images/client-logo/uideck.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="images/client-logo/ayroui.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="images/client-logo/lineicons.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="images/client-logo/tailwindtemplates.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="images/client-logo/ecomhtml.svg" alt="Brand Logo Images" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Brand Area -->
+        <div class="row g-4 align-items-start">
+          <div class="col-12 col-md-5">
+            <div class="card h-100 shadow-lg p-3 bg-body-tertiary rounded">
+              <div class="card-body text-start m-3">
+                <h2 id="details-title" class="h3 card-title fw-bold pt-1 pb-4">Technische Daten</h2>
 
-  <!-- ========================= contact-section start ========================= -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-4">
-          <div class="contact-item-wrapper">
-            <div class="row">
-              <div class="col-12 col-md-6 col-xl-12">
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="lni lni-phone"></i>
-                  </div>
-                  <div class="contact-content">
-                    <h4>Contact</h4>
-                    <p>0984537278623</p>
-                    <p>yourmail@gmail.com</p>
+                <div class="text-bg-light py-1 px-4 rounded d-flex flex-column gap-2 mb-3">
+                  <div class="d-flex">
+                    <div class="align-self-center"><i class="bi bi-gear-fill fs-4 text-primary" aria-hidden="true"></i>
+                    </div>
+                    <div class="py-1 px-4 flex-fill">
+                      <span class="fw-semibold">Firmware</span>
+                      <p class="mb-0 text-muted">Version 3.6 – energieeffizient optimiert</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-12 col-md-6 col-xl-12">
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="lni lni-map-marker"></i>
-                  </div>
-                  <div class="contact-content">
-                    <h4>Address</h4>
-                    <p>175 5th Ave, New York, NY 10010</p>
-                    <p>United States</p>
+
+                <div class="text-bg-light py-1 px-4 rounded d-flex flex-column gap-2 mb-3">
+                  <div class="d-flex">
+                    <div class="align-self-center fs-2" aria-hidden="true">🇩🇪</div>
+                    <div class="py-1 px-4 flex-fill">
+                      <span class="fw-semibold">Deutsches Produkt</span>
+                      <p class="mb-0 text-muted">Entwickelt und produziert in Deutschland</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-12 col-md-6 col-xl-12">
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="lni lni-alarm-clock"></i>
-                  </div>
-                  <div class="contact-content">
-                    <h4>Schedule</h4>
-                    <p>24 Hours / 7 Days Open</p>
-                    <p>Office time: 10 AM - 5:30 PM</p>
+
+                <div class="text-bg-light py-1 px-4 rounded d-flex flex-column gap-2 mb-3">
+                  <div class="d-flex">
+                    <div class="align-self-center"><i class="bi bi-battery-full fs-4 text-primary"
+                        aria-hidden="true"></i></div>
+                    <div class="py-1 px-4 flex-fill">
+                      <span class="fw-semibold">Stromversorgung</span>
+                      <p class="mb-0 text-muted">Batteriebetrieben (2× AAA)</p>
+                    </div>
                   </div>
                 </div>
+
+                <div class="text-bg-light py-1 px-4 rounded d-flex flex-column gap-2 mb-3">
+                  <div class="d-flex">
+                    <div class="align-self-center"><i class="bi bi-hash fs-4 text-primary" aria-hidden="true"></i></div>
+                    <div class="py-1 px-4 flex-fill">
+                      <span class="fw-semibold">Generation</span>
+                      <p class="mb-0 text-muted">4. Generation</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-bg-light py-1 px-4 rounded d-flex flex-column gap-2">
+                  <div class="d-flex">
+                    <div class="align-self-center"><i class="bi bi-rulers fs-4 text-primary" aria-hidden="true"></i>
+                    </div>
+                    <div class="py-1 px-4 flex-fill">
+                      <span class="fw-semibold">Anwendungsbereiche</span>
+                      <p class="mb-0 text-muted">Fenster, Türen, Schubladen, Schränke, Gitter</p>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
+
+          <div class="col-12 col-md-6 offset-md-1 py-3 py-md-5">
+            <h2 class="h3 mb-4 fw-bold">Perfektion im Detail</h2>
+            <p class="lead mb-4">
+              Der pinoBeep® Alarmgeber schützt Kleinkinder und Haustiere vor offenen Fenstern, Türen und Schubladen.
+              Einfach, effektiv und zuverlässig – kompakt und schnell montiert.
+            </p>
+
+            <ul class="list-unstyled">
+              <li class="d-flex align-items-start mb-3">
+                <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                <span>Sofort einsatzbereit ohne aufwendige Installation</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                <span>Kein Bohren notwendig (abhängig von Montageart)</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                <span>Warnt nur wenn nötig – intelligente Zeitsteuerung</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                <span>Robustes Gehäuse für den täglichen Einsatz</span>
+              </li>
+              <li class="d-flex align-items-start mb-0">
+                <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                <span>Kindersicheres Batteriefach</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-xl-8">
-          <div class="contact-form-wrapper">
-            <div class="row">
-              <div class="col-xl-10 col-lg-8 mx-auto">
-                <div class="section-title text-center">
-                  <span> Get in Touch </span>
-                  <h2>
-                    Ready to Get Started
-                  </h2>
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    quiblanditiis praesentium
+      </div>
+    </section>
+
+    <!-- Checkout -->
+    <section id="checkout" class="section-graylight py-standard-section" aria-labelledby="checkout-title">
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col-12 col-md-6 text-start mt-4">
+            <h2 id="checkout-title" class="mb-3">Bestellen Sie jetzt</h2>
+            <p class="lead mb-4" style="max-width: 36rem;">
+              Sichern Sie sich den pinoBeep® der 4. Generation zum Einführungspreis.
+            </p>
+
+            <div class="card shadow-sm rounded-4 overflow-hidden">
+              <div class="card-body bg-body-tertiary">
+                <div class="d-flex flex-column flex-sm-row gap-3 align-items-start">
+                  <img src="images/pinoBeep_img_promotion_001.jpg" alt="Produktbild pinoBeep® Gen 4" class="rounded-3"
+                    style="width: 160px; height: auto;" loading="lazy" decoding="async" />
+
+                  <div class="flex-grow-1 w-100">
+                    <div class="d-flex justify-content-between gap-3">
+                      <div>
+                        <h3 class="h5 fw-bold mb-1">pinoBeep® Gen 4</h3>
+                        <p class="text-muted small mb-2">
+                          Der intelligente Alarmgeber für Fenster, Türen und Schubladen.
+                        </p>
+                      </div>
+                      <div class="text-end">
+                        <div class="fw-bold text-primary fs-5 text-nowrap">29,99 €</div>
+                      </div>
+                    </div>
+
+                    <hr class="my-3" />
+
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-semibold">Versandkosten</span>
+                      <span class="fw-bold text-primary">0,- €</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer bg-body border-top">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold fs-5">Gesamtsumme</span>
+                  <span class="fw-bold fs-5">29,99 €</span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="list-unstyled mt-5">
+              <li class="d-flex align-items-start mb-2">
+                <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                <span>Inklusive Batterien und Montagematerial</span>
+              </li>
+              <li class="d-flex align-items-start mb-2">
+                <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                <span>Schneller Versand innerhalb von 2–3 Werktagen</span>
+              </li>
+              <li class="d-flex align-items-start mb-2">
+                <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                <span>Sichere Bezahlung</span>
+              </li>
+              <li class="d-flex align-items-start mb-0">
+                <div class="icon-circle-small me-3" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                <span>30 Tage Rückgaberecht</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-6 mt-4">
+            <div class="card h-100 shadow-lg p-3 bg-body-tertiary rounded">
+              <div class="card-body">
+                <h2 class="h3 mt-2 mb-4">Checkout &amp; Lieferung</h2>
+
+                <div class="alert alert-primary d-flex gap-3 align-items-start rounded-3 mb-4" role="alert">
+                  <i class="bi bi-paypal fs-3" aria-hidden="true"></i>
+                  <div>
+                    <strong>Aktuell nur PayPal</strong>
+                    <p class="mb-0 small">
+                      Der Kauf wird derzeit ausschließlich über PayPal abgewickelt.
+                    </p>
+                  </div>
+                </div>
+
+                <ul class="list-unstyled mb-4">
+                  <li class="d-flex gap-2 mb-2">
+                    <div class="icon-circle-small me-1" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                    <span>E-Mail-Adresse &amp; Lieferanschrift werden aus Ihrem PayPal-Konto übernommen</span>
+                  </li>
+                  <li class="d-flex gap-2 mb-2">
+                    <div class="icon-circle-small me-1" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                    <span>Keine zusätzliche Registrierung notwendig</span>
+                  </li>
+                  <li class="d-flex gap-2">
+                    <div class="icon-circle-small me-1" aria-hidden="true"><i class="bi bi-check-lg fs-5"></i></div>
+                    <span>Automatische Bestätigungs-E-Mail nach Abschluss</span>
+                  </li>
+                </ul>
+
+                <div class="text-center mt-4">
+                  <!-- Wenn es wirklich zahlt: in ein <a> mit echter PayPal-URL oder Form submit umwandeln -->
+                  <button
+                    class="btn btn-primary btn-lg w-100 rounded-3 d-flex align-items-center justify-content-center gap-2"
+                    type="button">
+                    <i class="bi bi-paypal fs-4" aria-hidden="true"></i>
+                    Mit PayPal bezahlen
+                  </button>
+
+                  <p class="text-muted small mt-3 mb-0">
+                    Sie werden sicher zu PayPal weitergeleitet
                   </p>
                 </div>
               </div>
             </div>
-            <form action="#" class="contact-form">
-              <div class="row">
-                <div class="col-md-6">
-                  <input type="text" name="name" id="name" placeholder="Name" required />
-                </div>
-                <div class="col-md-6">
-                  <input type="email" name="email" id="email" placeholder="Email" required />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <input type="text" name="phone" id="phone" placeholder="Phone" required />
-                </div>
-                <div class="col-md-6">
-                  <input type="text" name="subject" id="email" placeholder="Subject" required />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <textarea name="message" id="message" placeholder="Type Message" rows="5"></textarea>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="button text-center rounded-buttons">
-                    <button type="submit" class="btn primary-btn rounded-full">
-                      Send Message
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <div class="alert alert-warning mt-4 small" role="alert">
+              <strong>Hinweis:</strong><br>
+              pinoBeep® ist ein unterstützender Alarmgeber.
+              Das Produkt ersetzt keine Aufsichtspflicht
+              und stellt keine vollständige Sicherheitslösung dar.
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- ========================= contact-section end ========================= -->
+    </section>
 
-  <!-- ========================= map-section end ========================= -->
-  <section class="map-section map-style-9">
-    <div class="map-container">
-      <object style="border:0; height: 500px; width: 100%;"
-        data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.7887109309127!2d-77.44196278417968!3d38.95165507956235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDU3JzA2LjAiTiA3N8KwMjYnMjMuMiJX!5e0!3m2!1sen!2sbd!4v1545420879707"></object>
-    </div>
-    </div>
-  </section>
-  <!-- ========================= map-section end ========================= -->
+    <!-- CTA -->
+    <section class="section-indigo py-standard-section" aria-labelledby="cta-title">
+      <div class="container text-center">
+        <h2 id="cta-title" class="text-white fw-bold mb-4 fs-2">Bereit für mehr Sicherheit?</h2>
+        <p class="text-white mb-4 fs-5">
+          pinoBeep® ist mehr als nur ein Alarm. Es ist die Gewissheit, dass Ihre Liebsten geschützt sind.
+        </p>
+        <a class="btn btn-light btn-lg" href="#checkout">Jetzt sichern</a>
+      </div>
+    </section>
 
-  
+  </main>

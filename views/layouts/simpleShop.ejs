@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>pinoBeep® Gen 4 – Alarmgeber für Fenster, Türen & Schubladen</title>
+    <meta name="description"
+        content="pinoBeep® schützt Kleinkinder und Haustiere vor offenen Fenstern, Türen und Schubladen. Einfach montiert, zuverlässig und energieeffizient." />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Canonical: auf deine echte Domain setzen -->
+    <link rel="canonical" href="https://example.com/" />
+
+    <!-- Open Graph (Social Sharing) -->
+    <meta property="og:title" content="pinoBeep® Gen 4 – Sicherheit für Ihre Liebsten" />
+    <meta property="og:description" content="Der intelligente Alarmgeber für Fenster, Türen und Schubladen." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:image" content="https://example.com/images/pinoBeep_img_promotion_001.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicons: anpassen/ergänzen -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/bootstrap-custom.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+</head>
+
+<body>
+
+    <!--%- include('../partials/header.ejs') %-->
+    <%- include('../partials/errorMessage.ejs') %>
+    <%- body %>
+    <%- include('../partials/footer.ejs') %>
+
+    <!-- JS -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
