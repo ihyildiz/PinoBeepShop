@@ -116,7 +116,7 @@ exports.createOrder = async  () => {
                 return_url: process.env.BASE_URL + '/orders/complete-order',
                 cancel_url: process.env.BASE_URL + '/orders/cancel-order',
                 user_action: 'PAY_NOW',
-                brand_name: "LemCon UG"
+                brand_name: "pinoBeep® Shop",
             }
         })
     })
