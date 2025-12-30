@@ -61,7 +61,9 @@ const p = products.pinobeep_two_color_45v;
 
 exports.createOrder = async  () => {
     const accessToken = await generateAccessToken()
-    const response = await axios ({
+    
+    try { 
+        const response = await axios ({
         url: process.env.PAYPAL_BASE_URL + '/v2/checkout/orders',
         method: 'post',
         headers: {
@@ -139,7 +141,14 @@ exports.createOrder = async  () => {
     
     return response.data.links.find(link => link.rel ==='approve').href
 
+} catch (error) {
+    console.error('PAYPAL createOrder FAILED');
+    console.error('Status:', error?.response?.status);
+    console.error('Data:', JSON.stringify(error?.response?.data, null, 2));
+    throw error; // damit /orders/pay es auch sieht
+  }      
 }
+
 
 /*   TESTING createOrder() **
 
