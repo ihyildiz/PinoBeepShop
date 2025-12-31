@@ -24,14 +24,22 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Favicons: anpassen/ergänzen -->
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!--link rel="icon" href="/favicon.ico" /-->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" href="/favicon.ico">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
     <!-- CSS -->
-    <!-- Icons:  self-host  -->
-    <link rel="stylesheet" href="/css/vendor/bootstrap-icons/bootstrap-icons.css">
-    
     <!-- Entfernt CSS aus dem „kritischen Rendering-Pfad“ (PSI wird oft deutlich besser) -->
+    <!-- Optional: wenn du das CDN behältst -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <!-- Icons: besser self-host oder später laden; erstmal so lassen: -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!--link rel="stylesheet" href="/css/vendor/bootstrap-icons/bootstrap-icons.css"-->
+
     <!-- Nicht-blockierend laden -->
     <link rel="stylesheet" href="/css/bootstrap-custom.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/css/bootstrap-custom.css"></noscript>
