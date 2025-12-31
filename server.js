@@ -4,6 +4,16 @@
 
 const express = require ('express')
 const app = express()
+
+app.use((req, res, next) => {
+  const start = Date.now();
+  res.on('finish', () => {
+    console.log(`${req.method} ${req.originalUrl} -> ${res.statusCode} in ${Date.now() - start}ms`);
+  });
+  next();
+});
+
+
 const expressLayouts = require ('express-ejs-layouts')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
@@ -15,10 +25,10 @@ app.use((req, res, next) => {
 
 //const indexRouter = require ('./routes/index') --> bessere Namensgebung
 const routerIndex = require ('./routes/index')
-const routerAuthor = require ('./routes/authors')
-const routerBook = require ('./routes/books')
+//const routerAuthor = require ('./routes/authors')
+//const routerBook = require ('./routes/books')
 const routerOrder = require ('./routes/orders')
-const routerAdmin = require('./routes/admin')
+//const routerAdmin = require('./routes/admin')
 const routerPages = require ('./routes/pages')
 
 app.set('view engine', 'ejs')
@@ -26,12 +36,14 @@ app.set ('views', __dirname + '/views')
 // Standardlayout setzen
 app.set ('layout', 'layouts/simpleShop')
 
+
+/*
 // Middleware für spezielle Layouts
 app.use('/admin', (req, res, next) => {
     res.locals.layout = 'layouts/admin';
     next();
   });
-
+*/
 
 app.use (expressLayouts)
 app.use (methodOverride('_method'))
@@ -48,10 +60,10 @@ app.use (bodyParser.urlencoded({ limit: '10mb', extended: false }))
 //db.once('open', () => console.log('connected to mongoose'))
 
 app.use('/', routerIndex)
-app.use('/authors', routerAuthor)
-app.use('/books', routerBook)
+//app.use('/authors', routerAuthor)
+//app.use('/books', routerBook)
 app.use('/orders', routerOrder)
-app.use('/admin', routerAdmin)
+//app.use('/admin', routerAdmin)
 app.use('/', routerPages)
 
 
