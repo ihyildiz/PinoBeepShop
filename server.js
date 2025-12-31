@@ -47,7 +47,15 @@ app.use('/admin', (req, res, next) => {
 
 app.use (expressLayouts)
 app.use (methodOverride('_method'))
-app.use (express.static('public'))
+/******************************
+** Cache Header (optional, aber gut)
+** In Express kannst du für public aggressives Caching aktivieren (wenn du Versionierung nutzt):
+** ursprünglich nur ->app.use (express.static('public')) 
+*******************************/
+app.use(express.static('public', {
+  maxAge: '30d',
+  immutable: true
+}));
 app.use (bodyParser.urlencoded({ limit: '10mb', extended: false }))
 
 
