@@ -242,6 +242,90 @@
     </div>
   </section>
 
+
+
+
+  <!-- Produkt-Slider -->
+<section id="galerie" class="section-slate py-standard-section">
+  <div class="container ">
+    <div class="text-center mb-5">
+      <h2 id="produkt-galerie" class="text-primary fw-semibold mb-2 uppercase fs-5">Warum pinoBeep?</h2>
+      <p class="h2 fw-bold mb-2 text-white">Produktansichten</p>
+      <p class="text-muted fs-5 mx-auto" style="max-width: 48rem;">
+        Mehrere Ansichten unseres Produkts – für einen genauen Eindruck von <strong>Design</strong> und <strong>Verarbeitung</strong>.
+        Wir zeigen detaillierte Perspektiven, geöffnete Gehäuse mit <strong>Reed-Sensor</strong>,
+        sowie die <strong>Montage- und Befestigungsmöglichkeiten</strong> der Sensorik.
+      </p>
+    </div>
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Slides -->
+      <div class="carousel-inner rounded shadow-lg mx-auto" style="max-width:900px; max-height:600px !important;min-height:600px !important;">
+        <% const carouselImages = [
+          {src: "/images/pinoBeep_img_promotion_000.jpg", title: "pinoBeep Vorderansicht"},
+          {src: "/images/pinoBeep_img_promotion_002.jpg", title: "pinoBeep isometriche Aufnahme"},
+          {src: "/images/pinoBeep_img_promotion_003.jpg", title: "Frontanschicht mit Button und LED"},
+          {src: "/images/pinoBeep_img_promotion_004.jpg", title: "Detailaufnahme Battarie-Deckel"},
+          {src: "/images/pinoBeep_img_promotion_005.jpg", title: "pinoBeep und Sensorverkabelung"},
+          {src: "/images/pinoBeep_img_promotion_006.jpg", title: "Andere Farbkombinationen möglich"},
+          {src: "/images/pinoBeep_img_promotion_007.jpg", title: "Geöffnerter Deckel mit Sensorik"},
+          {src: "/images/pinoBeep_img_promotion_008.jpg", title: "Geöffneter Deckel, Detail in Sensorik"},
+          {src: "/images/pinoBeep_img_promotion_009.jpg", title: "Reed-Sensor kann geklebt oder verschraub werden"},
+          {src: "/images/pinoBeep_img_promotion_010.jpg", title: "pinoBeep Anwendung im Alltag"},
+          {src: "/images/pinoBeep_img_promotion_011.jpg", title: "pinoBeep Anwendung im Alltag"},
+          {src: "/images/pinoBeep_img_promotion_012.jpg", title: "pinoBeep Anwendung im Alltag"},
+          {src: "/images/pinoBeep_img_promotion_013.jpg", title: "pinoBeep Anwendung im Alltag"},
+          {src: "/images/pinoBeep_img_promotion_014.jpg", title: "Aussetzen des Reed-Sensors"},
+          {src: "/images/pinoBeep_img_promotion_015.jpg", title: "Reed-Sensor offen - Alarm"}
+        ]; %>
+
+        <% carouselImages.forEach((img, index) => { %>
+          <div class="carousel-item <%= index === 0 ? 'active' : '' %>" >
+            <!--img src="<%= img.src %>" class="w-100 rounded" alt="<%= img.title %>" loading="lazy" decoding="async" /-->
+            <img 
+              src="<%= img.src %>" 
+              class="d-block mx-auto img-fluid rounded product-slide" 
+              alt="<%= img.title %>" 
+              style="height: 600px;"
+              loading="lazy" 
+              decoding="async"
+            />
+            <!--div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2">
+              <h5 class="mb-0"><%= img.title %></h5>
+            </div-->
+          </div>
+        <% }) %>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Zurück</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Weiter</span>
+      </button>
+
+      <!-- Thumbnails -->
+      <div class="carousel-indicators mt-4 position-relative">
+        <% carouselImages.forEach((img, index) => { %>
+          <img
+            src="<%= img.src %>"
+            type="button"
+            data-bs-target="#productCarousel"
+            data-bs-slide-to="<%= index %>"
+            class="<%= index === 0 ? 'active' : '' %> rounded mx-1"
+            style="width: 80px; height: 60px; object-fit: cover; cursor: pointer;"
+            alt="Thumbnail <%= img.title %>"
+          />
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
   <!-- Details -->
   <section id="details" class="section-white py-standard-section" aria-labelledby="details-title">
     <div class="container">

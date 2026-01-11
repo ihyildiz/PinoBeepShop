@@ -152,6 +152,37 @@ body {
   }
 }
 
+/********************* Galerie */
+/* Carousel-Höhe festlegen (Container) */
+#productCarousel .carousel-inner {
+  height: 420px; /* gewünschte feste Höhe */
+  background-color: #f8f9fa; /* optional neutraler Hintergrund */
+}
+
+/* Alle Items übernehmen diese feste Höhe */
+#productCarousel .carousel-item {
+  height: 100%;
+}
+
+/* Bildgröße und Zentrierung */
+#productCarousel .product-slide {
+  max-height: 100%;   /* Bild nie größer als Container */
+  width: auto;        /* proportional skalieren */
+  object-fit: contain;
+  position: absolute; /* zentrieren per Positionierung */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Responsive Anpassung */
+@media (max-width: 768px) {
+  #productCarousel .carousel-inner {
+    height: 300px;
+  }
+}
+
+
 /*********************** Footer Links */
 
 
