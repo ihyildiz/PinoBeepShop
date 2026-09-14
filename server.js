@@ -2,6 +2,7 @@
     require('dotenv').config();
 //}
 
+
 const express = require ('express')
 const app = express()
 
@@ -47,6 +48,14 @@ app.use('/admin', (req, res, next) => {
 
 app.use (expressLayouts)
 app.use (methodOverride('_method'))
+/******************************** */
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(__dirname + '/public/sitemap.xml');
+});
+
+app.get('/robots.txt', (req, res) => {
+  res.sendFile(__dirname + '/public/robots.txt');
+});
 /******************************
 ** Cache Header (optional, aber gut)
 ** In Express kannst du für public aggressives Caching aktivieren (wenn du Versionierung nutzt):
