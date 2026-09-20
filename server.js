@@ -56,6 +56,11 @@ app.get('/sitemap.xml', (req, res) => {
 app.get('/robots.txt', (req, res) => {
   res.sendFile(__dirname + '/public/robots.txt');
 });
+
+// Alte Startseiten-URL dauerhaft auf die Hauptseite umleiten
+app.get('/index.html', (req, res) => {
+  res.redirect(301, '/');
+});
 /******************************
 ** Cache Header (optional, aber gut)
 ** In Express kannst du für public aggressives Caching aktivieren (wenn du Versionierung nutzt):
