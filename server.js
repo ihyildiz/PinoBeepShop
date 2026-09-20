@@ -67,7 +67,7 @@ app.get('/index.html', (req, res) => {
 ** ursprünglich nur ->app.use (express.static('public')) 
 *******************************/
 app.use(express.static('public', {
-  maxAge: '30d',
+  maxAge: '1d',
   immutable: true
 }));
 app.use (bodyParser.urlencoded({ limit: '10mb', extended: false }))
